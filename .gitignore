@@ -1,0 +1,23 @@
+# Dữ liệu ảnh MRI và trọng số mô hình
+data/
+checkpoints/
+*.pth
+*.pt
+*.h5
+
+# Môi trường ảo Python
+venv/
+env/
+.venv/
+
+# Cache Python & Notebook
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Logs
+runs/
+wandb/
+*.log
