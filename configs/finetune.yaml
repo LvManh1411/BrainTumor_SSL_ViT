@@ -1,0 +1,17 @@
+# Cấu hình Fine-tuning Phân loại U não
+dataset:
+  data_dir: "data/raw"
+  img_size: 224
+  batch_size: 16
+  num_workers: 0
+
+model:
+  num_classes: 4
+  ssl_checkpoint: "checkpoints/ssl/ssl_vit_epoch_1.pth"  # Nạp trọng số SSL vừa train
+  freeze_backbone: false                                 # Full Fine-tuning
+
+train:
+  epochs: 5
+  learning_rate: 0.00005                                # Learning rate nhỏ hơn khi Fine-tune (5e-5)
+  weight_decay: 0.01
+  save_dir: "checkpoints/finetune"
