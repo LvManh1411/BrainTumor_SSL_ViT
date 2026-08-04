@@ -10,7 +10,7 @@ class BrainTumorClassifier(nn.Module):
         base_model = BrainTumorViT(num_classes=num_classes, pretrained=False)
         self.encoder = base_model.vit
         
-        # 2. Nạp trọng số từ SSL Pretraining (nếu có)
+        # 2. Nạp trọng số từ SSL Pretraining
         if ssl_checkpoint_path:
             self.load_ssl_weights(ssl_checkpoint_path)
             
