@@ -1,0 +1,17 @@
+# Cấu hình huấn luyện SSL (Tự giám sát)
+dataset:
+  data_dir: "data/raw"
+  img_size: 224
+  batch_size: 32
+  num_workers: 2
+
+model:
+  projection_dim: 128
+  pretrained: true
+
+train:
+  epochs: 10              # Số epoch chạy thử (có thể tăng lên khi train chính thức)
+  learning_rate: 0.0003   # 3e-4
+  weight_decay: 0.05
+  temperature: 0.07       # Tham số cho InfoNCE Loss
+  save_dir: "checkpoints/ssl"
