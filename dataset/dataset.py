@@ -17,7 +17,7 @@ except (ModuleNotFoundError, ImportError):
     from transforms import get_train_transforms, get_val_transforms
 
 
-def get_dataloaders(data_dir="data/raw", batch_size=32, num_workers=2, img_size=224):
+def get_dataloaders(data_dir="data/processed", batch_size=32, num_workers=2, img_size=224):
     """
     Khởi tạo DataLoaders kết nối trực tiếp với file transforms.py
     """
