@@ -15,5 +15,5 @@ leak_delete = to_delete[to_delete['is_leak'] == True]
 print(f"Số ảnh do leak: {len(leak_delete)}")
 print(leak_delete['match_type'].value_counts())
 
-leak_near = df[(df['is_leak']==True) & (df['match_type']=='near')]
+leak_near = df[(df['is_leak']==True) & (df['match_type'].str.startswith('near_phash1'))]
 print(leak_near['group_id'].unique())

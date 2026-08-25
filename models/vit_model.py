@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # Tạo 1 batch ảnh giả lập có kích thước [32, 3, 224, 224]
     dummy_input = torch.randn(32, 3, 224, 224)
     
-    # Đưa qua mô hình
+    # Đưa qua mô hình 
     output = model(dummy_input)
     
     print("Khởi tạo mô hình Vision Transformer thành công!")
